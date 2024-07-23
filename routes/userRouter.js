@@ -6,14 +6,13 @@ const { handleCreateArticle, handleCreateUser, handleLikesAndViews, handleGetArt
 
 // Create user
 
-router.route
-.post('/', handleCreateUser);
+router.post('/', handleCreateUser);
 
 
-router.route
-.get('/:id', handleGetArticle)
-.post('/:id', handleCreateArticle)
-.patch('/:id', handleLikesAndViews)
+router.route('/:id')
+.get(handleGetArticle)
+.post(handleCreateArticle)
+.patch(handleLikesAndViews)
 
 
 module.exports = router;
